@@ -18,8 +18,15 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./*"]
+     "paths": {
+      "@/*": ["./*"],
+       "@/components": [
+        "./app/components/index.ts"
+      ],
+      "@/icons": [
+        "./public/icons/index.ts"
+      ]
+      
     }
   },
   "include": [
