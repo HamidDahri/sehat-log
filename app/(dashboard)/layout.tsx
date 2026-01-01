@@ -1,10 +1,18 @@
 import { Sidebar } from "../components";
+import TopBar from "../components/ui/layout/TopBar";
+import { SidebarProvider } from "../context/SidebarContext";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex">
-      <Sidebar />
-      <main className="flex-1">{children}</main>
-    </div>
+    <SidebarProvider>
+      <div className="flex">
+        <Sidebar />
+
+        <main className="flex-1 bg-white">
+          <TopBar />
+          {children}
+        </main>
+      </div>
+    </SidebarProvider>
   );
 }
