@@ -11,6 +11,7 @@ import IdIcon from "./IdIcon";
 import ProcessStateIcon from "./ProcessStateIcon";
 import FailedIcon from "./FailedIcon";
 import SuccessIcon from "./SuccessIcon";
+import DashboardIcon from "./DashboardIcon";
 
 export {
     EyeClosedIcon,
@@ -25,5 +26,6 @@ export {
     IdIcon,
     ProcessStateIcon,
     FailedIcon,
-    SuccessIcon
+    SuccessIcon,
+    DashboardIcon,
 }
