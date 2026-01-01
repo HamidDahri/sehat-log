@@ -73,7 +73,7 @@ const ThemeInput: React.FC<ThemeInputProps> = ({
   return (
     <label className="block ">
       {label && (
-        <span className="block mb-1 text-sm text-gray-700 font-medium text-start">
+        <span className="block mb-1 text-sm text-slate-700 font-normal text-start">
           {label} {required && <span className="text-red-500"> *</span>}
         </span>
       )}
@@ -84,11 +84,11 @@ const ThemeInput: React.FC<ThemeInputProps> = ({
           id={id}
           type={renderedType}
           style={icon ? { paddingLeft: `${iconTotalPadding}px` } : undefined}
-          className={`w-full focus:ring h-11 p-2 md:px-3 md:py-2.5 border   rounded-lg outline-none text-gray-900 placeholder:text-gray-500 placeholder:font-normal
+          className={`w-full focus:ring h-11 p-2 md:px-3.5 md:py-2.5 border   rounded-lg outline-none text-slate-900 placeholder:text-slate-400 placeholder:font-normal
             ${
               error
                 ? "border-red-500 focus:ring-red-200"
-                : "border-lightGray focus:ring-gray-200"
+                : "border-slate-200 focus:ring-gray-200"
             }
             ${disabled ? "bg-gray-100 cursor-not-allowed opacity-60" : ""}
             ${className}`}
@@ -119,7 +119,7 @@ const ThemeInput: React.FC<ThemeInputProps> = ({
           <button
             type="button"
             onClick={() => setPasswordVisible((v) => !v)}
-            className="absolute p-2 cursor-pointer -translate-y-1/2 rounded-md hover:bg-gray-200 right-2 top-1/2"
+            className="absolute p-1.5 cursor-pointer -translate-y-1/2  rounded-md hover:bg-gray-200 right-2 top-1/2"
             aria-label={passwordVisible ? "Hide password" : "Show password"}
           >
             {passwordVisible ? <EyeOpenedIcon /> : <EyeClosedIcon />}

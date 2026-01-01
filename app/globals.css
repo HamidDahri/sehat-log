@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary-green: #2F9A10;
+  --color-primary-green-dark: #1f670b;
+  --color-primary-blue: #0BA5EC;
+  --color-primary-blue-dark: #076e9d;
 
   /* custom color */
   --color-off-green: #DCFAE6;
@@ -28,4 +32,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.PhoneInputInput {
+  @apply p-0! text-[14px]! border-none!  w-full! outline-0! shadow-none!;
+}
+
+.PhoneInputInput {
+  background: transparent !important;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
