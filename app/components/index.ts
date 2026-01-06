@@ -6,6 +6,7 @@ import Loading from "./ui/Loading"
 import IdVerificationUpload from "./auth/IdVerificationUpload"
 import VerificationStatus from "./auth/VerificationStatus"
 import Sidebar from "./ui/layout/Sidebar"
+import DashboardEmptyState from "./ui/DashboardEmptyState"
 
 export {
 AuthHeader,
@@ -15,5 +16,6 @@ AuthHeader,
  Loading,
  IdVerificationUpload,
  VerificationStatus,
- Sidebar
+ Sidebar,
+ DashboardEmptyState
 }

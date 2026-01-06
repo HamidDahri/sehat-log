@@ -1,7 +1,18 @@
-import React from "react";
+import { DashboardEmptyState } from "@/app/components";
+import { DashboardEmpty } from "@/public/icons";
 
 const Page = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div className=" bg-red-500 mt-10 flex items-center justify-center">
+      <DashboardEmptyState
+        btnLabel="Upload Document"
+        icon={<DashboardEmpty />}
+        label="No Records Found"
+        subTitle=" Your health records will appear here once you start uploading them
+            or your doctor shares them with you."
+      />
+    </div>
+  );
 };
 
 export default Page;

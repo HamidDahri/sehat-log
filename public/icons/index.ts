@@ -20,11 +20,15 @@ import ProfileIcon from "./ProfileIcon";
 import KeyIcon from "./KeyIcon";
 import ProfileLogoutIcon from "./ProfileLogoutIcon";
 import SettingsIcon from "./SettingsIcon";
+import DashboardEmpty from "./DashboardEmpty";
+import PlusIcon from "./PlusIcon";
 
 
 
 export {
     BellIcon,
+    DashboardEmpty,
+    PlusIcon,
     SettingsIcon,
     ProfileLogoutIcon,
     KeyIcon,
