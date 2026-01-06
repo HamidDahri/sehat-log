@@ -145,7 +145,7 @@ const Sidebar = () => {
   return (
     <aside
       className={[
-        "h-dvh sticky top-0",
+        "h-dvh  top-0",
         "bg-slate-100 ",
         "transition-all duration-500",
         collapsed ? "w-14.5" : "w-55",

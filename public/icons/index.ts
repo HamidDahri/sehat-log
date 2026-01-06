@@ -22,10 +22,19 @@ import ProfileLogoutIcon from "./ProfileLogoutIcon";
 import SettingsIcon from "./SettingsIcon";
 import DashboardEmpty from "./DashboardEmpty";
 import PlusIcon from "./PlusIcon";
-
+import RecordCardIcon from "./RecordCardIcon";
+import PrescriptionIcon from "./PrescriptionIcon";
+import LabIcon from "./LabIcon";
+import HospitalCardIcon from "./HospitalCardIcon";
+import VaccineIcon from "./VaccineIcon";
 
 
 export {
+    RecordCardIcon,
+    LabIcon,
+    HospitalCardIcon,
+    VaccineIcon,
+    PrescriptionIcon,
     BellIcon,
     DashboardEmpty,
     PlusIcon,

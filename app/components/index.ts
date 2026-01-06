@@ -7,6 +7,7 @@ import IdVerificationUpload from "./auth/IdVerificationUpload"
 import VerificationStatus from "./auth/VerificationStatus"
 import Sidebar from "./ui/layout/Sidebar"
 import DashboardEmptyState from "./ui/DashboardEmptyState"
+import DashboardCard from "./Dashboard/DashboardCard"
 
 export {
 AuthHeader,
@@ -17,5 +18,6 @@ AuthHeader,
  IdVerificationUpload,
  VerificationStatus,
  Sidebar,
- DashboardEmptyState
+ DashboardEmptyState,
+ DashboardCard
 }

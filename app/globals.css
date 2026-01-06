@@ -19,6 +19,10 @@
   --color-off-green: #DCFAE6;
   --color-french-pass: #D1E9FF;
   --shadow-auth-card: 0px -30px 34px 0px rgba(0, 0, 0, 0.1);
+  --color-aztex-purple: #6944EF;
+  --color-crocus-purple: #9071FF;
+  --color-butterfly-blue: #0BA5EC;
+  --color-jordy-blue: #74C5EB;
 }
 
 @media (prefers-color-scheme: dark) {

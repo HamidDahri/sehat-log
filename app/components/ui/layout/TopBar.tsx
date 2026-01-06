@@ -30,7 +30,7 @@ const TopBar = () => {
         .replaceAll("-", " ")
         .replace(/\b\w/g, (c) => c.toUpperCase())}`;
   return (
-    <div className="flex items-center fixed top-0 justify-between w-full p-5 border-b border-b-slate-200">
+    <div className="flex items-center sticky top-0 justify-between w-full p-5 border-b border-b-slate-200">
       <div className="flex items-center gap-4">
         <button
           type="button"
