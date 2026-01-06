@@ -5,13 +5,10 @@ import { SidebarProvider } from "../context/SidebarContext";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <div className="flex">
+      <div className="bg-white flex">
         <Sidebar />
-
-        <main className="flex-1  bg-white">
-          <TopBar />
-          {children}
-        </main>
+        <TopBar />
+        <main className="w-full mt-20  bg-white">{children}</main>
       </div>
     </SidebarProvider>
   );

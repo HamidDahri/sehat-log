@@ -11,8 +11,8 @@ import {
 
 const Page = () => {
   return (
-    <div className="p-4 lg:p-6">
-      <div className="grid grid-cols-5 gap-6">
+    <div className="p-4 lg:p-6 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 lg:gap-6">
         <DashboardCard
           value={18}
           label="Records"

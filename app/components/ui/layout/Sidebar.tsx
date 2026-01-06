@@ -145,7 +145,7 @@ const Sidebar = () => {
   return (
     <aside
       className={[
-        "h-dvh  top-0",
+        "h-dvh sticky top-0",
         "bg-slate-100 ",
         "transition-all duration-500",
         collapsed ? "w-14.5" : "w-55",
@@ -161,7 +161,7 @@ const Sidebar = () => {
             <Image
               alt=""
               src={Images.auth.logoWithoutText}
-              className={`absolute transition-all duration-500 ease-in-out
+              className={`absolute transition-all duration-700 ease-in-out
       ${collapsed ? "opacity-100 scale-100" : "opacity-0 scale-95"}
     `}
             />
@@ -169,14 +169,14 @@ const Sidebar = () => {
             <Image
               alt=""
               src={Images.auth.logo}
-              className={`absolute w-40 transition-all duration-500 ease-in-out
+              className={`absolute w-40 transition-all duration-700 ease-in-out
       ${collapsed ? "opacity-0 scale-95" : "opacity-100 scale-100"}
     `}
             />
           </div>
         </div>
 
-        <nav className="mt-10 flex-1 px-3 pb-5 overflow-hidden">
+        <nav className="mt-10 flex-1 px-3 pb-5 overflow-y-auto">
           <div className="space-y-1.5">
             {mainItems.map((item) => {
               const active =
