@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Images } from "@/app/ui/images";
-import { DashboardActiveIcon, DashboardIcon, LogoutIcon } from "@/public/icons";
+import { DashboardActiveIcon, DashboardIcon, LogoutIcon, ReportActiveicon, Reporticon } from "@/public/icons";
 import { useSidebar } from "@/app/context/SidebarContext";
 
 type NavItem = {
@@ -40,8 +40,8 @@ const Sidebar = () => {
         label: "Reports",
         href: "/reports",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: Reporticon,
+        activeIcon: ReportActiveicon,
       },
       {
         label: "Prescriptions",

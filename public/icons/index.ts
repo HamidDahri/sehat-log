@@ -10,6 +10,8 @@ import Loader from "./Loader";
 import IdIcon from "./IdIcon";
 import ProcessStateIcon from "./ProcessStateIcon";
 import FailedIcon from "./FailedIcon";
+import Reporticon from "./Reporticon";
+import ReportActiveicon from "./ReportActiveicon";
 import SuccessIcon from "./SuccessIcon";
 import DashboardIcon from "./DashboardIcon";
 import DashboardActiveIcon from "./DashboardActiveIcon";
@@ -27,9 +29,12 @@ import PrescriptionIcon from "./PrescriptionIcon";
 import LabIcon from "./LabIcon";
 import HospitalCardIcon from "./HospitalCardIcon";
 import VaccineIcon from "./VaccineIcon";
-
+import ReportEmpty from "./ReportEmpty";
 
 export {
+    ReportEmpty,
+    ReportActiveicon,
+    Reporticon,
     RecordCardIcon,
     LabIcon,
     HospitalCardIcon,
