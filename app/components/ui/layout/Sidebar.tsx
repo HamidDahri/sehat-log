@@ -5,8 +5,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Images } from "@/app/ui/images";
-import { DashboardActiveIcon, DashboardIcon, LogoutIcon } from "@/public/icons";
+import { AppointmentsActiveIcon, AppointmentsIcon, ArchivesActiveIcon, ArchivesIcon, DashboardActiveIcon, DashboardIcon, DoctorsActiveicon, Doctorsicon, GalleryActiveIcon, GalleryIcon, HospitalsIcon, LogoutIcon, MessagesIcon, MyDiseasesIcon, MyFamilyActiveIcon, MyFamilyIcon, PrescriptionsIcon, ReportActiveicon, Reporticon, VaccinationActiveIcon } from "@/public/icons";
 import { useSidebar } from "@/app/context/SidebarContext";
+import PrescriptionsActiveIcon from "@/public/icons/PrescriptionsActiveIcon";
+import ReferralsIcon from "@/public/icons/ReferralsIcon";
+import ReferralsActiveIcon from "@/public/icons/ReferralsActiveIcon";
+import HospitalsActiveIcon from "@/public/icons/HospitalsActiveIcon";
+import VaccinationIcon from "@/public/icons/VaccinationIcon";
+import MyDiseasesActiveIcon from "@/public/icons/MyDiseasesActiveIcon";
+import SharedRecordsIcon from "@/public/icons/SharedRecordsIcon";
+import SharedRecordsActiveIcon from "@/public/icons/SharedRecordsActiveIcon";
+import UploadIcon from "@/public/icons/UploadIcon";
+import UploadActiveIcon from "@/public/icons/UploadActiveIcon";
+import MessagesActiveIcon from "@/public/icons/MessagesActiveIcon";
+import SettingIcon from "@/public/icons/SettingIcon";
+import SettingActiveIcon from "@/public/icons/SettingActiveIcon";
 
 type NavItem = {
   label: string;
@@ -33,107 +46,107 @@ const Sidebar = () => {
         label: "Appointments",
         href: "/appointments",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: AppointmentsIcon,
+        activeIcon: AppointmentsActiveIcon,
       },
       {
         label: "Reports",
         href: "/reports",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: Reporticon,
+        activeIcon: ReportActiveicon,
       },
       {
         label: "Prescriptions",
         href: "/prescriptions",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: PrescriptionsIcon,
+        activeIcon: PrescriptionsActiveIcon,
       },
       {
         label: "Referrals",
         href: "/referrals",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: ReferralsIcon,
+        activeIcon: ReferralsActiveIcon,
       },
       {
         label: "Hospitals",
         href: "/hospitals",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: HospitalsIcon,
+        activeIcon: HospitalsActiveIcon,
       },
       {
         label: "Vaccination",
         href: "/vaccination",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: VaccinationIcon,
+        activeIcon: VaccinationActiveIcon,
       },
       {
         label: "My Diseases",
         href: "/my-diseases",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: MyDiseasesIcon,
+        activeIcon: MyDiseasesActiveIcon,
       },
       {
         label: "Gallery",
         href: "/gallery",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: GalleryIcon,
+        activeIcon: GalleryActiveIcon,
       },
       {
         label: "Doctors",
         href: "/doctors",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: Doctorsicon,
+        activeIcon: DoctorsActiveicon,
       },
       {
         label: "My Family",
         href: "/my-family",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: MyFamilyIcon,
+        activeIcon: MyFamilyActiveIcon,
       },
       {
         label: "Shared Records",
         href: "/shared-records",
         section: "main",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: SharedRecordsIcon,
+        activeIcon: SharedRecordsActiveIcon,
       },
 
       {
         label: "Upload",
         href: "/upload",
         section: "secondary",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: UploadIcon,
+        activeIcon: UploadActiveIcon,
       },
       {
         label: "Messages",
         href: "/messages",
         section: "secondary",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: MessagesIcon,
+        activeIcon: MessagesActiveIcon,
       },
       {
         label: "Archives",
         href: "/archives",
         section: "secondary",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: ArchivesIcon,
+        activeIcon: ArchivesActiveIcon,
       },
       {
         label: "Settings",
         href: "/settings",
         section: "secondary",
-        icon: DashboardIcon,
-        activeIcon: DashboardActiveIcon,
+        icon: SettingIcon,
+        activeIcon: SettingActiveIcon,
       },
     ],
     []
