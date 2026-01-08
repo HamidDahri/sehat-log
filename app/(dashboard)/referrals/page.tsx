@@ -1,15 +1,15 @@
 import { DashboardEmptyState } from "@/app/components";
 import { DashboardEmpty } from "@/public/icons";
+import RaferralsEmpty from "@/public/icons/RaferralsEmpty";
 
 const Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <DashboardEmptyState
         btnLabel="Upload Document"
-        icon={<DashboardEmpty />}
-        label="No Records Found"
-        subTitle=" Your health records will appear here once you start uploading them
-            or your doctor shares them with you."
+        icon={<RaferralsEmpty />}
+        label="No Referrals Available Yet"
+        subTitle="You don’t have any referrals at the moment. Once your doctor refers you to another specialist, your referral details will appear here."
       />
     </div>
   );
