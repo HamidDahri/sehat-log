@@ -1,15 +1,14 @@
 import { DashboardEmptyState } from "@/app/components";
-import { DashboardEmpty } from "@/public/icons";
+import { AppointmentsEmpty, DashboardEmpty } from "@/public/icons";
 
 const Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <DashboardEmptyState
-        btnLabel="Upload Document"
-        icon={<DashboardEmpty />}
-        label="No Records Found"
-        subTitle=" Your health records will appear here once you start uploading them
-            or your doctor shares them with you."
+        btnLabel="New Appointment"
+        icon={<AppointmentsEmpty />}
+        label="No Appointments Found"
+        subTitle="Your appointments will appear here once your doctor schedules them or you upload related records."
       />
     </div>
   );

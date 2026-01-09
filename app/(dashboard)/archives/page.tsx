@@ -5,11 +5,10 @@ const Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <DashboardEmptyState
-        btnLabel="Upload Document"
+        btnLabel=" Learn How Archiving Works"
         icon={<DashboardEmpty />}
-        label="No Records Found"
-        subTitle=" Your health records will appear here once you start uploading them
-            or your doctor shares them with you."
+        label="No Archived Data Yet"
+        subTitle="You haven’t archived any data yet. Archived data like old reports, prescriptions, or appointments will appear here."
       />
     </div>
   );
