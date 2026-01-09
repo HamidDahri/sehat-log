@@ -7,6 +7,7 @@ export interface DashboardCardProps {
   icon: ReactNode;
   illustration?: StaticImageData;
   gradientClass?: string;
+  shadowColor?: string;
 }
 
 const DashboardCard: React.FC<DashboardCardProps> = ({
@@ -15,10 +16,14 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
   icon,
   illustration,
   gradientClass = "from-green-teal to-aqua-green",
+  shadowColor = "#6944EF99",
 }) => {
   return (
     <div
-      className={`relative flex items-center gap-5 rounded-xl py-4 px-5 bg-linear-0 ${gradientClass}`}
+      className={`relative flex items-center gap-5 rounded-xl py-4 px-5 bg-linear-90 ${gradientClass}`}
+      style={{
+        boxShadow: `0 2px 15px ${shadowColor}`,
+      }}
     >
       <div className="shrink-0">{icon}</div>
       <div className="space-y-1">

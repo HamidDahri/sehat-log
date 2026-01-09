@@ -12,6 +12,7 @@
     "@headlessui/react": "^2.2.9",
     "next": "16.1.1",
     "react": "19.2.3",
+    "react-apexcharts": "^1.9.0",
     "react-dom": "19.2.3",
     "react-otp-input": "^3.1.1",
     "react-phone-number-input": "^3.4.14"

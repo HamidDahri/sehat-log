@@ -8,10 +8,12 @@ import VerificationStatus from "./auth/VerificationStatus"
 import Sidebar from "./ui/layout/Sidebar"
 import DashboardEmptyState from "./ui/DashboardEmptyState"
 import DashboardCard from "./Dashboard/DashboardCard"
+import StatusDonutChart from "./Dashboard/Charts/StatusDonutChart"
 
 export {
 AuthHeader,
  Dropdown,
+ StatusDonutChart,
  ThemeButton,
  VerificationMethodSelector,
  Loading,

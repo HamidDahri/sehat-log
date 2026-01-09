@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="bg-white flex">
         <Sidebar />
         <TopBar />
-        <main className="w-full mt-20  bg-white">{children}</main>
+        <main className="w-full   bg-white">{children}</main>
       </div>
     </SidebarProvider>
   );
