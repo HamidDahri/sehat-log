@@ -66,8 +66,23 @@ import GalleryEmpty from "./GalleryEmpty";
 import DoctorsEmpty from "./DoctorsEmpty";
 import MyFamilyEmpty from "./MyFamilyEmpty";
 import SharedRecords from "./SharedRecords";
+import SyringeIcon from "./SyringeIcon";
+import HeartWithWaveIcon from "./HeartWithWaveIcon";
+import LungsIcon from "./LungsIcon";
+import RefreshIcon from "./RefreshIcon";
+import ClockIcon from "./ClockIcon";
+import UnCheckIcon from "./UnCheckIcon";
+import CheckCircleIcon from "./CheckCircleIcon";
+
 
 export {
+    ClockIcon,
+    CheckCircleIcon,
+    UnCheckIcon,
+    LungsIcon,
+    RefreshIcon,
+    HeartWithWaveIcon,
+    SyringeIcon,
     SharedRecords,
     MyFamilyEmpty,
     DoctorsEmpty,

@@ -1,12 +1,24 @@
 "use client";
-import { DashboardCard, StatusDonutChart } from "@/app/components";
+import {
+  DashboardCard,
+  DiseaseCard,
+  DoctorCard,
+  FamilyCard,
+  StatusDonutChart,
+} from "@/app/components";
+import ReportsSummaryChart, {
+  ReportsBarChartSeries,
+} from "@/app/components/Dashboard/Charts/ReportsSummaryChart";
 import RevenueChart from "@/app/components/Dashboard/Charts/RevenueChart";
 import { Images } from "@/app/ui/images";
 import {
+  HeartWithWaveIcon,
   HospitalCardIcon,
   LabIcon,
+  LungsIcon,
   PrescriptionIcon,
   RecordCardIcon,
+  SyringeIcon,
   VaccineIcon,
 } from "@/public/icons";
 import { useMemo, useState } from "react";
@@ -110,8 +122,15 @@ const chartData: Record<
   },
 };
 
+const series: ReportsBarChartSeries[] = [
+  { name: "Prescriptions", data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+  { name: "Lab Reports", data: [19, 16, 17, 14, 4, 18, 14, 8, 10, 8, 5, 8] },
+  { name: "Vaccines", data: [11, 14, 5, 10, 14, 4, 14, 5, 16, 12, 3, 3] },
+];
+
 const Page = () => {
   const [range, setRange] = useState<RangeKey>("weekly");
+  const [summaryRange, setSummaryRange] = useState<RangeKey>("weekly");
 
   const active = useMemo(() => chartData[range], [range]);
 
@@ -190,6 +209,136 @@ const Page = () => {
               yearly: { active: 19, expired: 20 },
             }}
           />
+        </div>
+
+        <div className="col-span-8">
+          <ReportsSummaryChart
+            series={series}
+            range={summaryRange}
+            onRangeChange={setSummaryRange}
+          />
+        </div>
+
+        <div className="col-span-4 border border-slate-200 rounded-xl overflow-hidden">
+          <div className="py-3 px-5 border-b border-b-slate-200">
+            <h2 className="text-slate-900 text-lg font-semibold">
+              My Diseases
+            </h2>
+          </div>
+          <div className="p-6 space-y-3">
+            <DiseaseCard
+              icon={<SyringeIcon />}
+              title="Diabetes (High Sugar)"
+              duration="03 years"
+            />
+            <DiseaseCard
+              icon={<HeartWithWaveIcon />}
+              title="Hypertension (High Blood Pressure)"
+              duration="05 years"
+              iconBgClassName="bg-red-500"
+            />
+            <DiseaseCard
+              icon={<LungsIcon />}
+              title="Asthma"
+              duration="01 years"
+              iconBgClassName="bg-primary-blue"
+            />
+          </div>
+        </div>
+
+        <div className="col-span-8 border border-slate-200 rounded-xl overflow-hidden">
+          <div className="py-3 px-5 flex items-center justify-between border-b border-b-slate-200">
+            <h2 className="text-slate-900 text-lg font-semibold">
+              My Diseases
+            </h2>
+            <div className="space-x-3">
+              <button
+                type="button"
+                className={`${btnBase} ${
+                  range === "weekly" ? btnActive : btnInactive
+                }`}
+              >
+                Weekly
+              </button>
+
+              <button
+                type="button"
+                className={`${btnBase} ${
+                  range === "monthly" ? btnActive : btnInactive
+                }`}
+              >
+                Monthly
+              </button>
+
+              <button
+                type="button"
+                className={`${btnBase} ${
+                  range === "yearly" ? btnActive : btnInactive
+                }`}
+              >
+                Yearly
+              </button>
+            </div>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <DoctorCard
+              name="Dr. Irum"
+              registrationNo="PK-20358"
+              specialization="Gynecologist"
+              clinic="Bone & Joint Center"
+              location="F-10, Islamabad"
+              imageSrc={Images.dashboard.userImage}
+              onViewClick={() => console.log("View doctor")}
+            />
+            <DoctorCard
+              name="Dr. Asad Khan"
+              registrationNo="(PK-20359)"
+              specialization="Orthopedic Surgeon"
+              clinic="Bone & Joint Center"
+              location="F-10, Islamabad"
+              imageSrc={Images.dashboard.userImage}
+              onViewClick={() => console.log("View doctor")}
+            />
+            <DoctorCard
+              name="Dr. Irum"
+              registrationNo="PK-20358"
+              specialization="Gynecologist"
+              clinic="Bone & Joint Center"
+              location="F-10, Islamabad"
+              imageSrc={Images.dashboard.userImage}
+              onViewClick={() => console.log("View doctor")}
+            />
+          </div>
+        </div>
+
+        <div className="col-span-4 border border-slate-200 rounded-xl overflow-hidden">
+          <div className="py-3 px-5 flex items-center justify-between border-b border-b-slate-200">
+            <h2 className="text-slate-900 text-lg font-semibold">
+              My Diseases
+            </h2>
+          </div>
+
+          <div className="p-6 space-y-3">
+            <FamilyCard
+              name="Muhammad Ali"
+              relation="Father"
+              imageSrc={Images.dashboard.userImage}
+              onActionClick={() => console.log("Switch family member")}
+            />
+            <FamilyCard
+              name="Ayesha Bibi"
+              relation="Mother"
+              imageSrc={Images.dashboard.userImage}
+              onActionClick={() => console.log("Switch family member")}
+            />
+            <FamilyCard
+              name="Sana"
+              relation="Sister"
+              imageSrc={Images.dashboard.userImage}
+              onActionClick={() => console.log("Switch family member")}
+            />
+          </div>
         </div>
       </div>
     </div>

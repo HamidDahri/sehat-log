@@ -9,8 +9,15 @@ import Sidebar from "./ui/layout/Sidebar"
 import DashboardEmptyState from "./ui/DashboardEmptyState"
 import DashboardCard from "./Dashboard/DashboardCard"
 import StatusDonutChart from "./Dashboard/Charts/StatusDonutChart"
+import DiseaseCard from "./Dashboard/DiseaseCard"
+import ReportsSummaryChart from "./Dashboard/Charts/ReportsSummaryChart"
+import DoctorCard from "./Dashboard/DoctorCard"
+import FamilyCard from "./Dashboard/FamilyCard"
+
 
 export {
+    DoctorCard,
+    FamilyCard,
 AuthHeader,
  Dropdown,
  StatusDonutChart,
@@ -21,5 +28,7 @@ AuthHeader,
  VerificationStatus,
  Sidebar,
  DashboardEmptyState,
- DashboardCard
+ DashboardCard,
+ DiseaseCard,
+ ReportsSummaryChart
 }

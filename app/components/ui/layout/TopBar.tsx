@@ -33,7 +33,7 @@ const TopBar = () => {
     <div
       className={`flex items-center fixed top-0 justify-between transition-all duration-500 bg-white end-0 ${
         collapsed ? "w-[calc(100%-58px)]" : "w-[calc(100%-204px)]"
-      } p-5 border-b border-b-slate-200`}
+      } p-5 border-b border-b-slate-200 z-50`}
     >
       <div className="flex items-center gap-4">
         <button
