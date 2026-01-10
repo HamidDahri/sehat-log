@@ -45,7 +45,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
       : "bg-primary-green text-white hover:bg-primary-green-dark",
     secondary: "bg-primary-blue text-white hover:bg-primary-blue-dark",
     outline:
-      "bg-white  text-gray-700 group-hover:!bg-gray-100 disabled:bg-gray-200 disabled:text-gray-400 disabled:border-gray-200",
+      "bg-white  text-gray-700 group-hover:!bg-gray-100 disabled:bg-gray-200 border border-gray-200 hover:bg-slate-50 disabled:text-gray-400 disabled:border-gray-200",
     success: "text-green-600 bg-green-50 group-hover:bg-green-200",
     primaryOutline:
       "text-primary-blue border border-primary-blue bg-white hover:bg-primary-blue hover:text-white group-hover:border-primary",

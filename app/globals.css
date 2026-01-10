@@ -23,6 +23,15 @@
   --color-crocus-purple: #9071FF;
   --color-butterfly-blue: #0BA5EC;
   --color-jordy-blue: #74C5EB;
+  --color-warning-100: #FEF0C7;
+  --color-warning-500: #F79009;
+  --color-warning-600: #DC6803;
+  --color-success-100: #DCFAE6;
+   --color-success-500: #17B26A;
+  --color-success-600: #079455;
+  --color-error-100: #FEE4E2;
+  --color-error-500: #F04438;
+  --color-error-600: #D92D20;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,7 +44,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  var(--poppins);
 }
 
 
@@ -48,4 +57,56 @@ body {
   border-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* ===== react-date-range: Static ranges (left presets) ===== */
+.rdr-scope .rdrStaticRanges {
+  padding: 0px;
+   /* slate-200 */
+}
+
+/* each item button */
+.rdr-scope .rdrStaticRange {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* label row */
+.rdr-scope .rdrStaticRangeLabel {
+  display: block;
+  width: 100%;
+  padding: 8px !important;
+  border-radius: 4px;
+  color: #334155; /* slate-700 */
+  margin-bottom: 2px;
+  font-size: 12px;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+/* hover */
+.rdr-scope .rdrStaticRange:hover .rdrStaticRangeLabel,
+.rdr-scope .rdrStaticRange:focus .rdrStaticRangeLabel {
+  background: #f1f5f9; /* slate-100 */
+  color: #0f172a; /* slate-900 */
+}
+
+/* active (selected preset) */
+.rdr-scope .rdrStaticRange.rdrStaticRangeSelected .rdrStaticRangeLabel {
+  background: #F1F5F9; /* slate-200 */
+  color: #0F172A; /* slate-900 */
+   font-weight: 600;
+}
+
+/* remove the weird blue left bar if you see it */
+.rdr-scope .rdrStaticRange::before {
+  display: none !important;
+}
+
+.rdr-scope .rdrDateDisplay {
+  display: none;
+}
+
+.rdrInputRanges {
+  display: none !important;
+  padding: 0px !important;
 }

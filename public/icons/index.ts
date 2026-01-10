@@ -73,9 +73,21 @@ import RefreshIcon from "./RefreshIcon";
 import ClockIcon from "./ClockIcon";
 import UnCheckIcon from "./UnCheckIcon";
 import CheckCircleIcon from "./CheckCircleIcon";
+import SearchIcon from "./SearchIcon";
+import GridIcon from "./GridIcon";
+import ListIcon from "./ListIcon";
+import CalendarIcon from "./CalendarIcon";
+import DownloadIcon from "./DownloadIcon";
+import ShareIcon from "./ShareIcon";
 
 
 export {
+SearchIcon,
+DownloadIcon,
+ShareIcon,
+CalendarIcon,
+GridIcon,
+ListIcon,
     ClockIcon,
     CheckCircleIcon,
     UnCheckIcon,

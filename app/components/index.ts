@@ -13,9 +13,11 @@ import DiseaseCard from "./Dashboard/DiseaseCard"
 import ReportsSummaryChart from "./Dashboard/Charts/ReportsSummaryChart"
 import DoctorCard from "./Dashboard/DoctorCard"
 import FamilyCard from "./Dashboard/FamilyCard"
+import SegmentedViewToggle from "./ui/buttons/SegmentedViewToggle"
 
 
 export {
+    SegmentedViewToggle,
     DoctorCard,
     FamilyCard,
 AuthHeader,
