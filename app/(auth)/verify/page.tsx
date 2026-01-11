@@ -2,10 +2,10 @@
 import { AuthHeader, ThemeButton } from "@/app/components";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import OTPInput from "react-otp-input";
 
-const Page = () => {
+function VerifyContent() {
   const searchParams = useSearchParams();
   const from = searchParams.get("from");
   const router = useRouter();
@@ -93,6 +93,12 @@ const Page = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Page;
+export default function Page() {
+  return (
+    <Suspense fallback={<h2>Loading</h2>}>
+      <VerifyContent />
+    </Suspense>
+  );
+}
