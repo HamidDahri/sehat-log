@@ -8,6 +8,7 @@ export type buttonVariant =
   | "outline"
   | "success"
   | "primaryOutline"
+  | "yellow"
   | "danger";
 interface ThemeButtonProps {
   label: string;
@@ -37,7 +38,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
   };
 
   const baseClasses =
-    "flex items-center group gap-1 whitespace-nowrap h-full justify-center w-full cursor-pointer font-semibold rounded-lg disabled:cursor-not-allowed";
+    "flex items-center group gap-1 xl:gap-2 whitespace-nowrap h-full justify-center w-full cursor-pointer font-semibold rounded-lg disabled:cursor-not-allowed";
 
   const variantClasses: Record<buttonVariant, string> = {
     primary: disabled
@@ -51,6 +52,8 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
       "text-primary-blue border border-primary-blue bg-white hover:bg-primary-blue hover:text-white group-hover:border-primary",
     danger:
       "text-white bg-red-500 border border-red-500 group-hover:bg-red-700 group-hover:border-red-700",
+    yellow:
+      "text-white bg-warning-500 border border-warning-500 group-hover:bg-warning-700 group-hover:border-warning-700",
   };
 
   return (

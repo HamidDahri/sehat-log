@@ -9,6 +9,7 @@ import React, {
   useState,
 } from "react";
 import ThemeButton from "../ui/buttons/ThemeButton";
+import { useRouter } from "next/navigation";
 
 type ImgState = {
   file: File | null;
@@ -20,6 +21,7 @@ const ACCEPTED_MIME = ["image/png", "image/jpeg", "image/jpg"];
 const ACCEPT_ATTR = "image/png,image/jpeg,image/jpg";
 
 const IdVerificationUpload = () => {
+  const router = useRouter();
   const [front, setFront] = useState<ImgState>({
     file: null,
     previewUrl: null,
@@ -118,6 +120,8 @@ const IdVerificationUpload = () => {
       frontInfo: front,
       backInfo: back,
     });
+
+    router.push("/process");
   };
 
   return (

@@ -1,5 +1,6 @@
 import {
   ArrowIcon,
+  DermatologistIcon,
   DownloadIcon,
   EyeOpenedIcon,
   ShareIcon,
@@ -13,7 +14,7 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowUpDown, Eye, Download, Share2 } from "lucide-react";
+import { ArrowUpDown } from "lucide-react";
 
 export type Appointment = {
   id: number;
@@ -100,6 +101,12 @@ export default function AppointmentsTable({
   const from = total === 0 ? 0 : pageIndex * pageSize + 1;
   const to = Math.min(from + pageSize - 1, total);
 
+  const SPECIALTY_ICON_MAP: Record<string, React.ReactNode> = {
+    Dermatologist: <DermatologistIcon />,
+    Cardiologist: <DermatologistIcon />,
+    Neurologist: <DermatologistIcon />,
+  };
+
   const columns: ColumnDef<Appointment>[] = [
     {
       accessorKey: "doctor",
@@ -119,6 +126,17 @@ export default function AppointmentsTable({
           Specialty <ArrowUpDown size={14} />
         </button>
       ),
+      cell: ({ row }) => {
+        const specialty = row.original.specialty;
+        const icon = SPECIALTY_ICON_MAP[specialty];
+
+        return (
+          <div className="flex items-center gap-2">
+            <span className="text-slate-500">{icon}</span>
+            <span className="text-slate-900 font-medium">{specialty}</span>
+          </div>
+        );
+      },
     },
     { accessorKey: "problem", header: "Problem" },
     { accessorKey: "date", header: "Date" },

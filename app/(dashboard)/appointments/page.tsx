@@ -1,5 +1,7 @@
 "use client";
 import {
+  AppointmentCancelModal,
+  AppointmentDetailModal,
   DashboardCard,
   SegmentedViewToggle,
   ThemeButton,
@@ -69,6 +71,9 @@ const Page = () => {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState<"list" | "board">("list");
+  const [showDetailModal, setShowDetailModal] = useState(false);
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const [selectedRow, setSelectedRow] = useState<Appointment>();
 
   // parent owns search
   const [search, setSearch] = useState("");
@@ -168,7 +173,8 @@ const Page = () => {
   // actions (parent)
   const handleView = (row: Appointment) => {
     console.log("VIEW", row);
-    // open modal / route / drawer etc.
+    setSelectedRow(row);
+    setShowDetailModal(true);
   };
 
   const handleDownload = (row: Appointment) => {
@@ -213,10 +219,10 @@ const Page = () => {
 
       <div className="space-y-5">
         <div className="flex items-center gap-4 justify-between">
-          <div className="flex items-center relative flex-1 max-w-152 min-w-100">
+          <div className="flex items-center relative flex-1 max-w-152 min-w-60">
             <input
               placeholder="Search doctor..."
-              className="border border-slate-200 min-w-100 flex-1 focus:ring-slate-300 focus:ring-1 placeholder:text-slate-400 text-slate-900 font-normal text-sm md:text-base outline-none ps-10 rounded-lg py-2.5 px-3.5"
+              className="border border-slate-200 min-w-60 flex-1 focus:ring-slate-300 focus:ring-1 placeholder:text-slate-400 text-slate-900 font-normal text-sm md:text-base outline-none ps-10 rounded-lg py-2.5 px-3.5"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -293,6 +299,30 @@ const Page = () => {
           onShare={handleShare}
         />
       </div>
+
+      <AppointmentDetailModal
+        isOpen={showDetailModal}
+        onClose={() => {
+          setShowDetailModal(false);
+        }}
+        data={selectedRow ?? null}
+        onConfirm={() => {
+          if (selectedRow?.status === "Missed") setShowCancelModal(true);
+          else if (selectedRow?.status === "Upcoming") setShowCancelModal(true);
+          // setShowDetailModal(false);
+        }}
+      />
+
+      <AppointmentCancelModal
+        isOpen={showCancelModal}
+        onClose={() => {
+          setShowCancelModal(false);
+        }}
+        onConfirm={() => {
+          setShowCancelModal(false);
+          setShowDetailModal(false);
+        }}
+      />
     </div>
   );
 };

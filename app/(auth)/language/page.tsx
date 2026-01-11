@@ -1,6 +1,7 @@
 "use client";
 import { AuthHeader, Dropdown, ThemeButton } from "@/app/components";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const signingupOptions = [
@@ -12,6 +13,7 @@ const signingupOptions = [
 ];
 
 const Page = () => {
+  const router = useRouter();
   const [language, setLanguage] = useState<string | undefined>();
   return (
     <div className="flex items-center justify-center -mt-10">
@@ -26,12 +28,23 @@ const Page = () => {
             placeholder="Select Language"
             showSearch
           />
-          <ThemeButton label={"Continue"} type="submit" />
+          <ThemeButton
+            label={"Continue"}
+            type="submit"
+            disabled={!language}
+            onClick={() => {
+              if (language) {
+                router.push("verify-identity");
+              }
+            }}
+          />
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <button
-            onClick={() => {}}
+            onClick={() => {
+              router.push("verify-identity");
+            }}
             className="font-semibold cursor-pointer text-primary-blue"
           >
             Skip for now

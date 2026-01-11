@@ -4,9 +4,11 @@ import VerificationMethodSelector, {
   VerificationMethodValue,
   VerificationOption,
 } from "@/app/components/auth/VerificationMethodSelector";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
 const Page = () => {
+  const router = useRouter();
   const [method, setMethod] = useState<VerificationMethodValue | null>("email");
 
   const userEmail = "as@gmail.com";
@@ -60,7 +62,15 @@ const Page = () => {
           <ThemeButton
             label="Continue"
             disabled={false}
-            onClick={() => {}}
+            onClick={() => {
+              if (method === "email") {
+                router.push("/verify?from=emailVerify");
+              } else if (method === "phone") {
+                router.push("/verify?from=phoneVerify");
+              } else if (method === "authenticator") {
+                router.push("/dashboard");
+              }
+            }}
             type="submit"
           />
         </div>

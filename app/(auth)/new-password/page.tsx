@@ -1,8 +1,10 @@
 "use client";
 import { AuthHeader, ThemeButton } from "@/app/components";
 import ThemeInput from "@/app/components/ui/input/ThemeInput";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
   return (
     <div className="flex items-center justify-center -mt-10 ">
       <div className="py-10 px-8 rounded-xl relative space-y-8  bg-white w-full max-w-xl shadow-auth-card">
@@ -38,7 +40,9 @@ const Page = () => {
           <ThemeButton
             label="Reset Password"
             disabled={false}
-            onClick={() => {}}
+            onClick={() => {
+              router.push("/login");
+            }}
             type="submit"
           />
         </div>

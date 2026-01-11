@@ -79,9 +79,14 @@ import ListIcon from "./ListIcon";
 import CalendarIcon from "./CalendarIcon";
 import DownloadIcon from "./DownloadIcon";
 import ShareIcon from "./ShareIcon";
-
+import TrashIcon from "./TrashIcon";
+import CalendarIcon2 from "./CalendarIcon2";
+import DermatologistIcon from "./DermatologistIcon";
 
 export {
+    TrashIcon,
+    DermatologistIcon,
+    CalendarIcon2,
 SearchIcon,
 DownloadIcon,
 ShareIcon,

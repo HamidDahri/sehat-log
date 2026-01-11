@@ -3,8 +3,10 @@ import { AuthHeader, ThemeButton } from "@/app/components";
 import CustomCheckbox from "@/app/components/ui/input/CustomCheckBox";
 import ThemeInput from "@/app/components/ui/input/ThemeInput";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
   return (
     <div className="flex items-center justify-center -mt-10 ">
       <div className="py-10 px-8 rounded-xl relative space-y-8  bg-white w-full max-w-xl shadow-auth-card">
@@ -55,7 +57,9 @@ const Page = () => {
           <ThemeButton
             label="Sign in"
             disabled={false}
-            onClick={() => {}}
+            onClick={() => {
+              router.push("/verification-method");
+            }}
             type="submit"
           />
         </div>

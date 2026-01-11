@@ -2,6 +2,7 @@
 import { AuthHeader, Dropdown, ThemeButton } from "@/app/components";
 import ThemeInput from "@/app/components/ui/input/ThemeInput";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const signingupOptions = [
@@ -10,6 +11,7 @@ const signingupOptions = [
 ];
 
 const Page = () => {
+  const router = useRouter();
   const [period, setPeriod] = useState<string | undefined>();
   return (
     <div className="flex items-center justify-center -mt-10 ">
@@ -65,7 +67,9 @@ const Page = () => {
           <ThemeButton
             label="Sign Up"
             disabled={false}
-            onClick={() => {}}
+            onClick={() => {
+              router.push("/verify?from=register");
+            }}
             type="submit"
           />
         </div>
@@ -74,7 +78,7 @@ const Page = () => {
             Already have an account?
           </span>
           <Link
-            href={"/signin"}
+            href={"/login"}
             className="font-semibold text-sm text-primary-blue"
           >
             Sign In

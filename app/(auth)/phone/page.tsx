@@ -7,6 +7,7 @@ import PhoneInput, {
   parsePhoneNumber,
 } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { useRouter } from "next/navigation";
 
 type PhoneMeta = {
   phone: string;
@@ -17,6 +18,7 @@ type PhoneMeta = {
 };
 
 const Page = () => {
+  const router = useRouter();
   const [meta, setMeta] = useState<PhoneMeta>({
     phone: "",
     countryName: "",
@@ -118,6 +120,11 @@ const Page = () => {
             label={submitting ? "Verifying..." : "Verify"}
             type="submit"
             disabled={submitting || (touched && !!error)}
+            onClick={() => {
+              if (!submitting && touched && !error) {
+                router.push("verify?from=phone");
+              }
+            }}
           />
         </div>
       </form>

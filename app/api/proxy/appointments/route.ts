@@ -1,16 +1,29 @@
 import { NextResponse } from "next/server";
 
 type Status = "Upcoming" | "Completed" | "Missed" | "Canceled";
+const STATUSES: Status[] = [
+  "Upcoming",
+  "Completed",
+  "Missed",
+  "Canceled",
+];
 
-const ALL_DATA = Array.from({ length: 52 }, (_, i) => ({
-  id: i + 1,
-  doctor: `Dr. ${i + 1}`,
-  specialty: "Dermatologist",
-  problem: "Checkup",
-  date: "10 July 2025",
-  time: "10:00 AM",
-  status: (i % 2 === 0 ? "Upcoming" : "Completed") as Status,
-}));
+const ALL_DATA = Array.from({ length: 52 }, (_, i) => {
+  const status: Status =
+    i < STATUSES.length
+      ? STATUSES[i]                  // guarantee each at least once
+      : STATUSES[i % STATUSES.length]; // cycle for rest
+
+  return {
+    id: i + 1,
+    doctor: `Dr. ${i + 1}`,
+    specialty: "Dermatologist",
+    problem: "Checkup",
+    date: "10 July 2025",
+    time: "10:00 AM",
+    status,
+  };
+});
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);

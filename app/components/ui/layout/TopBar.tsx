@@ -114,7 +114,7 @@ const TopBar = () => {
           <MenuItems
             anchor="bottom end"
             className={
-              "outline-0 bg-white rounded-lg mt-1 p-1 me-2 drop-shadow"
+              "outline-0 bg-white rounded-lg mt-1 p-1 me-2 drop-shadow z-50"
             }
           >
             <MenuItem>
