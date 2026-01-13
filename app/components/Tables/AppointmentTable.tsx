@@ -33,7 +33,7 @@ const statusStyles: Record<Appointment["status"], string> = {
   Canceled: "bg-error-100 text-error-600",
 };
 
-function getPaginationRange(
+export function getPaginationRange(
   current: number,
   total: number,
   delta = 1

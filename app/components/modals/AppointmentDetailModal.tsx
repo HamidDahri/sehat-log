@@ -9,6 +9,7 @@ interface AppointmentDetailModalProps {
   onClose: () => void;
   onConfirm: () => void;
   data: Appointment | null;
+  onCancel: () => void;
 }
 
 type FieldConfig = {
@@ -20,6 +21,7 @@ const AppointmentDetailModal: React.FC<AppointmentDetailModalProps> = ({
   isOpen,
   onClose,
   onConfirm,
+  onCancel,
   data,
 }) => {
   const handleClose = () => {
@@ -93,6 +95,7 @@ const AppointmentDetailModal: React.FC<AppointmentDetailModalProps> = ({
         )
       }
       cancelBtnIcon={<CrossIcon width="12" height="12" fill="white" />}
+      onCancel={onCancel}
     >
       <div className="space-y-4">
         {getFields(data).map((field) => (

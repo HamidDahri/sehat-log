@@ -17,8 +17,11 @@ import SegmentedViewToggle from "./ui/buttons/SegmentedViewToggle";
 import Portal from "./ui/portal";
 import AppointmentDetailModal from "./modals/AppointmentDetailModal";
 import AppointmentCancelModal from "./modals/AppointmentCancelModal";
+import AppointmentRescheduleModal from "./modals/AppointmentRescheduleModal";
+import AppointmentCard from "./Dashboard/AppointmentCard";
 
 export {
+  AppointmentCard,
   AppointmentCancelModal,
   Portal,
   AppointmentDetailModal,
@@ -38,4 +41,5 @@ export {
   DashboardCard,
   DiseaseCard,
   ReportsSummaryChart,
+  AppointmentRescheduleModal,
 };
