@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckIcon } from "@/public/icons";
+import { CheckboxCheckedIcon, CheckBoxIcon, CheckIcon } from "@/public/icons";
 import { Checkbox } from "@headlessui/react";
 import clsx from "clsx";
 
@@ -32,12 +32,12 @@ export default function CustomCheckbox({
       <span
         className={clsx(
           "text-sm inline-block font-medium text-slate-700",
-          width
+          width,
         )}
       >
         {label}
       </span>
-      <Checkbox
+      {/* <Checkbox
         checked={checked}
         onChange={disabled ? () => {} : onChange}
         disabled={disabled}
@@ -51,7 +51,8 @@ export default function CustomCheckbox({
         `}
       >
         {checked && <CheckIcon />}
-      </Checkbox>
+      </Checkbox> */}
+      {checked ? <CheckboxCheckedIcon /> : <CheckBoxIcon />}
     </label>
   );
 }

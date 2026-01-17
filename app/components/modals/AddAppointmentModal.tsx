@@ -34,7 +34,7 @@ const langsOptions = [
   { label: "Hindi", value: "hindi" },
 ];
 
-const docsOptions = [
+export const docsOptions = [
   { label: "Dr ali", value: "ali" },
   { label: "Dr khan", value: "khan" },
   { label: "Dr Asad", value: "Asad" },

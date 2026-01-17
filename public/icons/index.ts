@@ -88,10 +88,17 @@ import CheckBoxIcon from "./CheckBoxIcon";
 import CheckboxCheckedIcon from "./CheckboxCheckedIcon";
 import ClipIcon from "./ClipIcon";
 import UploadActiveIcon from "./UploadActiveIcon";
-import CalendarCheckIcon from "./CalendarCheckIcon"
+import CalendarCheckIcon from "./CalendarCheckIcon";
+import WhatsappIcon from "./WhatsappIcon";
+import GmailIcon from "./GmailIcon";
+import SMSIcon from "./SMSIcon";
+
 
 
 export {
+    WhatsappIcon,
+    GmailIcon,
+    SMSIcon,
     CalendarCheckIcon,
     UploadActiveIcon,
     ClipIcon,

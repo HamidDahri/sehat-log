@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import AppModal from "./AppModal";
-import { CalendarCheckIcon, CalendarIcon, CalendarIcon2 } from "@/public/icons";
+import { CalendarCheckIcon } from "@/public/icons";
 
 interface ModalProps {
   isOpen: boolean;

@@ -255,7 +255,7 @@ const Page = () => {
 
       <AddAppointmentModal
         isOpen={showAppointmentModal}
-        onClose={() => setShowAddAppointmentModal(true)}
+        onClose={() => setShowAddAppointmentModal(false)}
         onConfirm={() => setShowAddAppointmentConfirmModal(true)}
       />
 
@@ -269,6 +269,8 @@ const Page = () => {
           setShowAddAppointmentConfirmModal(false);
         }}
       />
+
+      <h2>share remains</h2>
     </div>
   );
 };

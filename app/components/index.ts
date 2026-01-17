@@ -25,9 +25,11 @@ import ProblemDropdown from "./ui/dropdown/ProblemDropdown";
 import AddAppointmentModal from "./modals/AddAppointmentModal";
 import AppointmentTypePills from "./ui/buttons/AppointmentTypePills";
 import AppointmentConfirmModal from "./modals/AppointmentConfirmModal";
+import AppointmentShareModal from "./modals/AppointmentShareModal ";
 
 
 export {
+  AppointmentShareModal,
   AppointmentConfirmModal,
   AppointmentTypePills,
   ProblemDropdown,

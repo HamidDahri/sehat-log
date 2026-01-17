@@ -4,6 +4,7 @@ import {
   AppointmentCard,
   AppointmentDetailModal,
   AppointmentRescheduleModal,
+  AppointmentShareModal,
   DashboardCard,
   DashboardEmptyState,
   SegmentedViewToggle,
@@ -79,6 +80,7 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState<"list" | "board">("list");
   const [showDetailModal, setShowDetailModal] = useState(false);
+  const [showShareModal, setShowShareModal] = useState(false);
   const [showCancelModal, setShowCancelModal] = useState(false);
   const [showRescheduleModal, setShowRescheduleModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState<Appointment>();
@@ -147,7 +149,7 @@ const Page = () => {
 
         qs.set(
           "from",
-          formatISO(dateRange.startDate, { representation: "date" })
+          formatISO(dateRange.startDate, { representation: "date" }),
         );
         qs.set("to", formatISO(dateRange.endDate, { representation: "date" }));
 
@@ -191,66 +193,6 @@ const Page = () => {
     view, // keep it always present if you want it
   ]);
 
-  // useEffect(() => {
-  //   const controller = new AbortController();
-
-  //   async function fetchAppointments() {
-  //     try {
-  //       setLoading(true);
-
-  //       const qs = new URLSearchParams();
-  //       qs.set("page", String(pageIndex + 1));
-  //       qs.set("limit", String(pageSize));
-  //       qs.set("search", debouncedSearch);
-
-  //       // status filter
-  //       if (status !== "All") qs.set("status", status);
-
-  //       // date range filter (YYYY-MM-DD)
-  //       qs.set(
-  //         "from",
-  //         formatISO(dateRange.startDate, { representation: "date" })
-  //       );
-  //       qs.set("to", formatISO(dateRange.endDate, { representation: "date" }));
-
-  //       // sorting (only if backend supports it)
-  //       if (sortParam) qs.set("sort", sortParam);
-
-  //       const res = await fetch(`/api/proxy/appointments?${qs.toString()}`, {
-  //         signal: controller.signal,
-  //       });
-
-  //       if (!res.ok) {
-  //         const err = await res
-  //           .json()
-  //           .catch(() => ({ message: "Unknown error" }));
-  //         throw new Error(err.message);
-  //       }
-
-  //       const json = await res.json();
-  //       setData(json.data);
-  //       setTotal(json.total);
-  //       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //     } catch (e: any) {
-  //       if (e.name !== "AbortError") console.error("Fetch error:", e);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
-
-  //   fetchAppointments();
-  //   return () => controller.abort();
-  // }, [
-  //   pageIndex,
-  //   pageSize,
-  //   debouncedSearch,
-  //   status,
-  //   dateRange.startDate,
-  //   dateRange.endDate,
-  //   sortParam,
-  //   view,
-  // ]);
-
   useEffect(() => {
     if (pageSizeTouched) return;
 
@@ -277,6 +219,7 @@ const Page = () => {
 
   const handleShare = (row: Appointment) => {
     console.log("SHARE", row);
+    setShowShareModal(true);
     // share modal / copy link etc.
   };
 
@@ -469,7 +412,7 @@ const Page = () => {
                           >
                             {page}
                           </button>
-                        )
+                        ),
                     )}
 
                     <button
@@ -536,6 +479,14 @@ const Page = () => {
             { id: "4", label: "4:00 PM", value: "16:00" },
           ];
         }}
+      />
+
+      <AppointmentShareModal
+        isOpen={showShareModal}
+        onClose={() => {
+          setShowShareModal(false);
+        }}
+        onConfirm={() => setShowShareModal(true)}
       />
     </div>
   );
