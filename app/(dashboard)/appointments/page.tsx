@@ -31,6 +31,7 @@ import {
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { SortingState } from "@tanstack/react-table";
 import { endOfDay, formatISO, startOfDay } from "date-fns";
+import { useRouter } from "next/navigation";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -85,6 +86,8 @@ const Page = () => {
   // parent owns search
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
+
+  const router = useRouter();
 
   // parent owns pagination + sorting
   const [pageIndex, setPageIndex] = useState(0);
@@ -380,7 +383,9 @@ const Page = () => {
               <ThemeButton
                 label="New Appointment"
                 icon={<PlusIcon />}
-                onClick={() => {}}
+                onClick={() => {
+                  router.push("/appointments/add-appointment");
+                }}
               />
             </div>
           </div>

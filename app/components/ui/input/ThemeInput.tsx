@@ -8,6 +8,8 @@ export enum InputType {
   TEXT = "text",
   PASSWORD = "password",
   EMAIL = "email",
+  Date = "date",
+  Time = "Time",
 }
 
 type ThemeInputProps = {
@@ -53,7 +55,7 @@ const ThemeInput: React.FC<ThemeInputProps> = ({
 
   const normalizedType = useMemo(
     () => String(type || "text").toLowerCase(),
-    [type]
+    [type],
   );
 
   const isPassword = normalizedType === "password";

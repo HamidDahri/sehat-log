@@ -2,6 +2,7 @@ import React from "react";
 
 type buttonType = "button" | "submit" | "reset";
 type buttonSize = "small" | "medium" | "large";
+type iconDirection = "end" | "start";
 export type buttonVariant =
   | "primary"
   | "secondary"
@@ -19,6 +20,7 @@ interface ThemeButtonProps {
   size?: buttonSize;
   variant?: buttonVariant;
   minWidthClass?: string;
+  iconDirection?: iconDirection;
 }
 
 const ThemeButton: React.FC<ThemeButtonProps> = ({
@@ -30,6 +32,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
   size = "medium",
   variant = "primary",
   minWidthClass,
+  iconDirection = "start",
 }) => {
   const sizeClasses: Record<buttonSize, string> = {
     small: "px-3 py-1 text-sm ",
@@ -56,12 +59,15 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
       "text-white bg-warning-500 border border-warning-500 group-hover:bg-warning-700 group-hover:border-warning-700",
   };
 
+  const directionClasses =
+    iconDirection === "start" ? "flex-row" : "flex-row-reverse";
+
   return (
     <button
       disabled={disabled}
       onClick={onClick}
       type={type}
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${minWidthClass}`}
+      className={`${baseClasses} ${directionClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${minWidthClass}`}
     >
       {icon && <span className="flex items-center ">{icon}</span>} {label}
     </button>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const signingupOptions = [
+const langsOptions = [
   { label: "English", value: "english" },
   { label: "German", value: "german" },
   { label: "French", value: "french" },
@@ -22,7 +22,7 @@ const Page = () => {
 
         <div className="space-y-6">
           <Dropdown
-            options={signingupOptions}
+            options={langsOptions}
             value={language}
             onChange={setLanguage}
             placeholder="Select Language"

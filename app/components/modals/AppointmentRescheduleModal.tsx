@@ -1,45 +1,3 @@
-// "use client";
-// import React from "react";
-// import AppModal from "./AppModal";
-
-// interface ModalProps {
-//   isOpen: boolean;
-//   onClose: () => void;
-//   onConfirm: () => void;
-// }
-
-// const AppointmentRescheduleModal: React.FC<ModalProps> = ({
-//   isOpen,
-//   onClose,
-//   onConfirm,
-// }) => {
-//   const handleClose = () => {
-//     onClose();
-//   };
-
-//   const handleConfirm = async () => {
-//     onConfirm();
-//   };
-
-//   return (
-//     <AppModal
-//       isOpen={isOpen}
-//       onClose={handleClose}
-//       title="Appointment Details"
-//       subtitle="Are you sure you want to cancel this appointment?"
-//       onConfirm={handleConfirm}
-//       confirmLabel="Yes, Cancel"
-//       cancelLabel="No, Go Back"
-//       cancelBtnVarient="outline"
-//       size="small"
-//     >
-//       <h2>Reschedule Appointment</h2>
-//     </AppModal>
-//   );
-// };
-
-// export default AppointmentRescheduleModal;
-
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -62,14 +20,7 @@ type ConfirmPayload = {
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-
-  /** Updated: you get selected date/time/reason here */
   onConfirm: (data: ConfirmPayload) => void;
-
-  /**
-   * Optional: provide slots based on date (API call)
-   * If not provided, we use default demo slots.
-   */
   getAvailableSlots?: (date: string) => Promise<Slot[]> | Slot[];
 }
 

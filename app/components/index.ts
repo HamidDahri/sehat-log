@@ -19,9 +19,21 @@ import AppointmentDetailModal from "./modals/AppointmentDetailModal";
 import AppointmentCancelModal from "./modals/AppointmentCancelModal";
 import AppointmentRescheduleModal from "./modals/AppointmentRescheduleModal";
 import AppointmentCard from "./Dashboard/AppointmentCard";
+import GroupToggle from "./ui/buttons/GroupToggle";
+import DoctorAddCard from "./Dashboard/DoctorddCard";
+import ProblemDropdown from "./ui/dropdown/ProblemDropdown";
+import AddAppointmentModal from "./modals/AddAppointmentModal";
+import AppointmentTypePills from "./ui/buttons/AppointmentTypePills";
+import AppointmentConfirmModal from "./modals/AppointmentConfirmModal";
+
 
 export {
+  AppointmentConfirmModal,
+  AppointmentTypePills,
+  ProblemDropdown,
+  DoctorAddCard,
   AppointmentCard,
+  GroupToggle,
   AppointmentCancelModal,
   Portal,
   AppointmentDetailModal,
@@ -42,4 +54,5 @@ export {
   DiseaseCard,
   ReportsSummaryChart,
   AppointmentRescheduleModal,
+  AddAppointmentModal
 };

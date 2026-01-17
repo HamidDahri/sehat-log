@@ -38,6 +38,7 @@ interface AppModalProps {
   cancelBtnIcon?: React.ReactNode;
   disableCloseButton?: boolean;
   hideCrossButton?: boolean;
+  mainIcon?: React.ReactNode;
 }
 
 const sizeClasses = {
@@ -74,6 +75,7 @@ const AppModal: React.FC<AppModalProps> = ({
   cancelBtnIcon,
   disableCloseButton = false,
   hideCrossButton = false,
+  mainIcon,
 }) => {
   useBodyScrollLock(isOpen);
 
@@ -104,7 +106,7 @@ const AppModal: React.FC<AppModalProps> = ({
             className={`px-6 relative bg-white flex sm:rounded-t-xl items-center ${
               position === ModalPosition.CENTER
                 ? "justify-end py-3"
-                : "justify-between py-3"
+                : "justify-between py-3 border-b border-salte-200"
             }`}
           >
             <div className="flex items-center gap-2 sm:gap-3">
@@ -145,6 +147,15 @@ const AppModal: React.FC<AppModalProps> = ({
               </button>
             )}
           </div>
+
+          {mainIcon && (
+            <div className="bg-white flex items-center justify-center">
+              <div className="rounded-full flex items-center mb-6 justify-center w-16 h-16 bg-blue-100">
+                {mainIcon}
+              </div>
+            </div>
+          )}
+
           {position === ModalPosition.CENTER && (
             <div className="bg-white">
               <h2

@@ -82,8 +82,23 @@ import ShareIcon from "./ShareIcon";
 import TrashIcon from "./TrashIcon";
 import CalendarIcon2 from "./CalendarIcon2";
 import DermatologistIcon from "./DermatologistIcon";
+import BookmarkFilledIcon from "./BookmarkFilledIcon";
+import BookmarkIcon from "./BookmarkIcon";
+import CheckBoxIcon from "./CheckBoxIcon";
+import CheckboxCheckedIcon from "./CheckboxCheckedIcon";
+import ClipIcon from "./ClipIcon";
+import UploadActiveIcon from "./UploadActiveIcon";
+import CalendarCheckIcon from "./CalendarCheckIcon"
+
 
 export {
+    CalendarCheckIcon,
+    UploadActiveIcon,
+    ClipIcon,
+    CheckBoxIcon,
+    CheckboxCheckedIcon,
+    BookmarkFilledIcon,
+    BookmarkIcon,
     TrashIcon,
     DermatologistIcon,
     CalendarIcon2,
