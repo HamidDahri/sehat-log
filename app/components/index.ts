@@ -26,9 +26,11 @@ import AddAppointmentModal from "./modals/AddAppointmentModal";
 import AppointmentTypePills from "./ui/buttons/AppointmentTypePills";
 import AppointmentConfirmModal from "./modals/AppointmentConfirmModal";
 import AppointmentShareModal from "./modals/AppointmentShareModal ";
+import ReportsTable from "./Tables/ReportTable";
 
 
 export {
+  ReportsTable,
   AppointmentShareModal,
   AppointmentConfirmModal,
   AppointmentTypePills,

@@ -36,7 +36,7 @@ const statusStyles: Record<Appointment["status"], string> = {
 export function getPaginationRange(
   current: number,
   total: number,
-  delta = 1
+  delta = 1,
 ): (number | "...")[] {
   const range: (number | "...")[] = [];
   const left = Math.max(1, current - delta);
@@ -224,7 +224,7 @@ export default function AppointmentsTable({
                 >
                   {flexRender(
                     header.column.columnDef.header,
-                    header.getContext()
+                    header.getContext(),
                   )}
                 </th>
               ))}
@@ -312,7 +312,7 @@ export default function AppointmentsTable({
                   >
                     {page}
                   </button>
-                )
+                ),
               )}
 
               <button

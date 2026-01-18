@@ -92,10 +92,16 @@ import CalendarCheckIcon from "./CalendarCheckIcon";
 import WhatsappIcon from "./WhatsappIcon";
 import GmailIcon from "./GmailIcon";
 import SMSIcon from "./SMSIcon";
+import TotalReportsIcon from "./TotalReportsIcon";
+import PendingIcon from "./PendingIcon";
+import DownloadFilledIcon from "./DownloadFilledIcon";
 
 
 
 export {
+    TotalReportsIcon,
+    DownloadFilledIcon,
+    PendingIcon,
     WhatsappIcon,
     GmailIcon,
     SMSIcon,
