@@ -289,7 +289,7 @@ const Page = () => {
           <div className="flex items-center gap-4 justify-between">
             <div className="flex items-center relative flex-1 max-w-152 min-w-60">
               <input
-                placeholder="Search doctor..."
+                placeholder="Search report name..."
                 className="border border-slate-200 min-w-60 flex-1 focus:ring-slate-300 focus:ring-1 placeholder:text-slate-400 text-slate-900 font-normal text-sm md:text-base outline-none ps-10 rounded-lg py-2.5 px-3.5"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
