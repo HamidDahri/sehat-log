@@ -30,8 +30,6 @@ export type Report = {
   date: string;
   time: string;
   status: "Reviewed" | "Available" | "Pending";
-
-  // ⚠️ Your table uses these keys too. Keep/remove as per your actual API.
   reportName?: string;
   lab?: string;
   analysis?: string;

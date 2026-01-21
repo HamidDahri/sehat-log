@@ -95,11 +95,13 @@ import SMSIcon from "./SMSIcon";
 import TotalReportsIcon from "./TotalReportsIcon";
 import PendingIcon from "./PendingIcon";
 import DownloadFilledIcon from "./DownloadFilledIcon";
+import PDFIcon from "./PDFIcon";
 
 
 
 export {
     TotalReportsIcon,
+    PDFIcon,
     DownloadFilledIcon,
     PendingIcon,
     WhatsappIcon,

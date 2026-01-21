@@ -27,10 +27,25 @@ import AppointmentTypePills from "./ui/buttons/AppointmentTypePills";
 import AppointmentConfirmModal from "./modals/AppointmentConfirmModal";
 import AppointmentShareModal from "./modals/AppointmentShareModal ";
 import ReportsTable from "./Tables/ReportTable";
+import ReportsCard from "./Dashboard/ReportsCard";
+import AddReportModal from "./modals/AddReportModal";
+import ThemeTextarea from "./ui/input/ThemeTextarea";
+import TestResultsTable from "./Tables/TestResultsTable";
+import ReportDetailModal from "./modals/ReportDetailModal";
+import AttachedFileCard from "./Dashboard/AttachedFileCard";
+import DeleteModal from "./modals/DeleteModal";
+
 
 
 export {
+  ThemeTextarea,
+  DeleteModal,
+  AttachedFileCard,
+  ReportDetailModal,
+  TestResultsTable,
   ReportsTable,
+  AddReportModal,
+  ReportsCard,
   AppointmentShareModal,
   AppointmentConfirmModal,
   AppointmentTypePills,

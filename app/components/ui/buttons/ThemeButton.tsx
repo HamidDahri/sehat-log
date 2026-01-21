@@ -10,7 +10,8 @@ export type buttonVariant =
   | "success"
   | "primaryOutline"
   | "yellow"
-  | "danger";
+  | "danger"
+  | "dangerOutline";
 interface ThemeButtonProps {
   label: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -57,6 +58,8 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
       "text-white bg-red-500 border border-red-500 group-hover:bg-red-700 group-hover:border-red-700",
     yellow:
       "text-white bg-warning-500 border border-warning-500 group-hover:bg-warning-700 group-hover:border-warning-700",
+    dangerOutline:
+      "bg-white text-red-500 border border-red-500 hover:bg-red-700 hover:text-white group-hover:border-red-700",
   };
 
   const directionClasses =

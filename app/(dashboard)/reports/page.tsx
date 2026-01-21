@@ -1,8 +1,12 @@
 "use client";
 import {
+  AddReportModal,
   AppointmentShareModal,
   DashboardCard,
   DashboardEmptyState,
+  DeleteModal,
+  ReportDetailModal,
+  ReportsCard,
   ReportsTable,
   SegmentedViewToggle,
   ThemeButton,
@@ -80,9 +84,10 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState<"list" | "board">("list");
   const [showDetailModal, setShowDetailModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState<Report>();
-
+  const [showReportModal, setShowReportModal] = useState(false);
   // parent owns search
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
@@ -440,12 +445,11 @@ const Page = () => {
           <>
             <div className="grid grid-cols-4 gap-5">
               {data.map((item, index) => (
-                // <AppointmentCard
-                //   key={index}
-                //   data={item}
-                //   onView={() => handleView(item)}
-                // />
-                <h2 key={index}>hamid</h2>
+                <ReportsCard
+                  key={index}
+                  data={item}
+                  onView={() => handleView(item)}
+                />
               ))}
             </div>
             {data.length > 0 && !loading && (
@@ -515,21 +519,39 @@ const Page = () => {
         )}
       </div>
 
-      {/* <AppointmentDetailModal
+      <AddReportModal
+        isOpen={showReportModal}
+        onClose={() => {
+          setShowReportModal(false);
+        }}
+        onConfirm={() => {
+          setShowReportModal(false);
+        }}
+      />
+
+      <ReportDetailModal
+        onConfirm={() => {}}
+        onCancel={() => {
+          setShowDeleteModal(true);
+        }}
         isOpen={showDetailModal}
         onClose={() => {
           setShowDetailModal(false);
         }}
         data={selectedRow ?? null}
+      />
+
+      <DeleteModal
+        isOpen={showDeleteModal}
+        onClose={() => {
+          setShowDeleteModal(false);
+          setShowDetailModal(false);
+        }}
         onConfirm={() => {
-          if (selectedRow?.status === "Reviewed") setShowRescheduleModal(true);
-          else if (selectedRow?.status === "Available")
-            setShowRescheduleModal(true);
+          setShowDeleteModal(false);
+          setShowDetailModal(false);
         }}
-        onCancel={() => {
-          setShowCancelModal(true);
-        }}
-      /> */}
+      />
 
       <AppointmentShareModal
         isOpen={showShareModal}

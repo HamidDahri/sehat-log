@@ -39,6 +39,7 @@ interface AppModalProps {
   disableCloseButton?: boolean;
   hideCrossButton?: boolean;
   mainIcon?: React.ReactNode;
+  mainIconBg?: string;
 }
 
 const sizeClasses = {
@@ -76,6 +77,7 @@ const AppModal: React.FC<AppModalProps> = ({
   disableCloseButton = false,
   hideCrossButton = false,
   mainIcon,
+  mainIconBg = "bg-blue-100",
 }) => {
   useBodyScrollLock(isOpen);
 
@@ -150,7 +152,9 @@ const AppModal: React.FC<AppModalProps> = ({
 
           {mainIcon && (
             <div className="bg-white flex items-center justify-center">
-              <div className="rounded-full flex items-center mb-6 justify-center w-16 h-16 bg-blue-100">
+              <div
+                className={`rounded-full flex items-center mb-6 justify-center w-16 h-16 ${mainIconBg}`}
+              >
                 {mainIcon}
               </div>
             </div>
