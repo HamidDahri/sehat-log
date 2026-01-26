@@ -25,6 +25,8 @@ interface DropdownProps {
 
   error?: boolean;
   errorMessage?: string;
+
+  width?: string;
 }
 
 const Dropdown = ({
@@ -41,6 +43,8 @@ const Dropdown = ({
 
   error = false,
   errorMessage = "",
+
+  width = "w-full",
 }: DropdownProps) => {
   const selectedOption = options.find((opt) => opt.value === value);
 
@@ -61,7 +65,7 @@ const Dropdown = ({
   const resetQuery = () => setQuery("");
 
   return (
-    <div className="w-full">
+    <div className={`${width}`}>
       {label && (
         <span className="block mb-1 text-sm text-slate-700 font-normal text-start">
           {label} {required && <span className="text-red-500"> *</span>}

@@ -34,10 +34,16 @@ import TestResultsTable from "./Tables/TestResultsTable";
 import ReportDetailModal from "./modals/ReportDetailModal";
 import AttachedFileCard from "./Dashboard/AttachedFileCard";
 import DeleteModal from "./modals/DeleteModal";
+import PrescriptionsTable from "./Tables/PrescriptionTable";
+import PrescriptionCard from "./Dashboard/PrescriptionCard";
+import MedicineResultsTable from "./Tables/MedicineResultsTable";
 
 
 
 export {
+  PrescriptionCard,
+  MedicineResultsTable,
+  PrescriptionsTable,
   ThemeTextarea,
   DeleteModal,
   AttachedFileCard,

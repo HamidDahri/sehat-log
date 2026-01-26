@@ -96,10 +96,19 @@ import TotalReportsIcon from "./TotalReportsIcon";
 import PendingIcon from "./PendingIcon";
 import DownloadFilledIcon from "./DownloadFilledIcon";
 import PDFIcon from "./PDFIcon";
+import CalendarCrossIcon from "./CalendarCrossIcon";
+import ActivePrescriptionIcon from "./ActivePrescriptionIcon";
+import PrescriptionDashIcon from "./PrescriptionDashIcon";
+import TimerIcon from "./TimerIcon";
+
 
 
 
 export {
+    TimerIcon,
+    CalendarCrossIcon,
+    ActivePrescriptionIcon,
+    PrescriptionDashIcon,
     TotalReportsIcon,
     PDFIcon,
     DownloadFilledIcon,
