@@ -10,6 +10,9 @@ import UploadArrowIcon from "@/public/icons/UploadArrowIcon";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import ThemeTextarea from "../ui/input/ThemeTextarea";
 import TestResultsTable, { TestResultRow } from "../Tables/TestResultsTable";
+import MedicineResultsTable, {
+  MedicineResultRow,
+} from "../Tables/MedicineResultsTable";
 
 interface ModalProps {
   isOpen: boolean;
@@ -46,12 +49,13 @@ const AddPrescriptionModal: React.FC<ModalProps> = ({
 
   const [notes, setNotes] = useState("");
 
-  const [rows, setRows] = useState<TestResultRow[]>([
+  const [rows, setRows] = useState<MedicineResultRow[]>([
     {
       id: crypto.randomUUID(),
-      parameter: "",
-      result: "",
-      normalRange: "",
+      medicine: "",
+      dosage: "",
+      duration: "",
+      notes: "",
     },
   ]);
 
@@ -59,7 +63,7 @@ const AddPrescriptionModal: React.FC<ModalProps> = ({
     <AppModal
       isOpen={isOpen}
       onClose={onClose}
-      title="Add Appointment"
+      title="Add New Prescription"
       onConfirm={handleConfirm}
       confirmLabel="Submit"
       cancelLabel="Cancel"
@@ -73,34 +77,27 @@ const AddPrescriptionModal: React.FC<ModalProps> = ({
       <div className="space-y-5">
         <div className="grid grid-cols-2 gap-4">
           <ThemeInput
-            label="Name:"
-            placeholder="Enter Report Name"
+            label="Prescription:"
+            placeholder="Enter Prescription:"
             onChange={() => {}}
             type="text"
           />
           <ThemeInput
-            label="Lab:"
-            placeholder="Enter Lab:"
-            onChange={() => {}}
-            type="text"
-          />
-
-          <ThemeInput
-            label="Doctor"
-            onChange={() => {}}
-            type="text"
+            label="Doctor:"
             placeholder="Enter Doctor Name"
+            onChange={() => {}}
+            type="text"
           />
-          <ThemeInput label="Date" onChange={() => {}} type="date" />
-          <ThemeInput label="Time" onChange={() => {}} type="time" />
 
-          <Dropdown
-            options={reportStatusOptions}
-            value={clinic}
-            onChange={setClinic}
-            placeholder="Select Your Report status"
-            label={"Status"}
+          <ThemeInput
+            label="Hospital:"
+            onChange={() => {}}
+            type="text"
+            placeholder="Enter Hospital"
           />
+          <ThemeInput label="Time" onChange={() => {}} type="time" />
+          <ThemeInput label="Issued Date:" onChange={() => {}} type="date" />
+          <ThemeInput label="Expires On::" onChange={() => {}} type="date" />
         </div>
         <ThemeTextarea
           title="Notes"
@@ -108,7 +105,8 @@ const AddPrescriptionModal: React.FC<ModalProps> = ({
           value={notes}
           onChange={setNotes}
         />
-        <TestResultsTable mode="edit" rows={rows} onChange={setRows} />;
+        {/* <TestResultsTable mode="edit" rows={rows} onChange={setRows} />; */}
+        <MedicineResultsTable mode="edit" rows={rows} onChange={setRows} />
         <div className="space-y-1.5">
           <p className=" text-sm font-semibold text-slate-700">
             Attachments{" "}

@@ -37,11 +37,14 @@ import DeleteModal from "./modals/DeleteModal";
 import PrescriptionsTable from "./Tables/PrescriptionTable";
 import PrescriptionCard from "./Dashboard/PrescriptionCard";
 import MedicineResultsTable from "./Tables/MedicineResultsTable";
-
+import ReferralsTable from "./Tables/ReferralTable";
+import ReferralsCard from "./Dashboard/ReferralsCard";
 
 
 export {
+  ReferralsCard,
   PrescriptionCard,
+  ReferralsTable,
   MedicineResultsTable,
   PrescriptionsTable,
   ThemeTextarea,

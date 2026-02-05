@@ -100,11 +100,16 @@ import CalendarCrossIcon from "./CalendarCrossIcon";
 import ActivePrescriptionIcon from "./ActivePrescriptionIcon";
 import PrescriptionDashIcon from "./PrescriptionDashIcon";
 import TimerIcon from "./TimerIcon";
-
-
-
+import ReferalTotalDashIcon from "./ReferalTotalDashIcon";
+import ReferedFromIcon from "./ReferedFromIcon";
+import ReferedToArrowIcon from "./ReferedToArrowIcon";
+import EmergencyDashIcon from "./EmergencyDashIcon";
 
 export {
+    ReferalTotalDashIcon,
+    ReferedFromIcon,
+    ReferedToArrowIcon,
+    EmergencyDashIcon,
     TimerIcon,
     CalendarCrossIcon,
     ActivePrescriptionIcon,

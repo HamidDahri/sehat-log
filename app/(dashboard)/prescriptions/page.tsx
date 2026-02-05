@@ -14,6 +14,7 @@ import {
   SegmentedViewToggle,
   ThemeButton,
 } from "@/app/components";
+import AddPrescriptionModal from "@/app/components/modals/AddPrescriptionModal";
 import PrescriptionDetailModal from "@/app/components/modals/PrescriptionDetailModal";
 import { getPaginationRange } from "@/app/components/Tables/AppointmentTable";
 import { Prescription } from "@/app/components/Tables/PrescriptionTable";
@@ -259,12 +260,24 @@ const Page = () => {
 
   const specialities = [
     {
-      label: "All Specialty",
-      value: "All Specialty",
+      label: "All Hospital",
+      value: "All Hospital",
     },
     {
-      label: "Dermotologist",
-      value: "Dermotologist",
+      label: "Excel Medical & Diagnostics",
+      value: "Excel Medical & Diagnostics",
+    },
+    {
+      label: "Maroof International Hospital",
+      value: "Maroof International Hospital",
+    },
+    {
+      label: "Shifa Care Clinic",
+      value: "Shifa Care Clinic",
+    },
+    {
+      label: "MedCity Diagnostics",
+      value: "MedCity Diagnostics",
     },
   ];
 
@@ -340,7 +353,7 @@ const Page = () => {
                   label="New Prescriptions"
                   icon={<PlusIcon />}
                   onClick={() => {
-                    router.push("/reports/add-report");
+                    setShowReportModal(true);
                   }}
                 />
               </div>
@@ -348,7 +361,7 @@ const Page = () => {
           </div>
 
           <div className="flex items-center gap-4 justify-end">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center w-full justify-end gap-4">
               <DateRangeFilter
                 value={dateRange}
                 onApply={(next) => {
@@ -395,15 +408,15 @@ const Page = () => {
                 onChange={setLab}
                 options={labs}
                 value={lab}
-                placeholder="Specialty"
-                width="w-44"
+                placeholder="Lab"
+                width="w-[400px]"
               />
               <Dropdown
                 onChange={setSpecialty}
                 options={specialities}
                 value={specialty}
-                placeholder="Specialty"
-                width="w-44"
+                placeholder="Hospital"
+                width="w-[400px]"
               />
               <div>
                 <ThemeButton
@@ -520,7 +533,7 @@ const Page = () => {
         )}
       </div>
 
-      <AddReportModal
+      <AddPrescriptionModal
         isOpen={showReportModal}
         onClose={() => {
           setShowReportModal(false);
