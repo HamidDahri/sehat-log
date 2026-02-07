@@ -104,8 +104,15 @@ import ReferalTotalDashIcon from "./ReferalTotalDashIcon";
 import ReferedFromIcon from "./ReferedFromIcon";
 import ReferedToArrowIcon from "./ReferedToArrowIcon";
 import EmergencyDashIcon from "./EmergencyDashIcon";
+import HospitalDashIcon from "./HospitalDashIcon";
+import CloudCheckIcon from "./CloudCheckIcon";
+import ArchiveDashIcon from "./ArchiveDashIcon";
+
 
 export {
+    HospitalDashIcon,
+    CloudCheckIcon,
+    ArchiveDashIcon,
     ReferalTotalDashIcon,
     ReferedFromIcon,
     ReferedToArrowIcon,

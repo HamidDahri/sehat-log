@@ -17,7 +17,7 @@ const ALL_DATA = Array.from({ length: 52 }, (_, i) => {
     id: i + 1,
     referedDoctor: `Dr. ${i + 1}`,
     referedToDoctor: `Dr. R ${i + 1}`,
-    urgency: "Dermatologist",
+    urgency: "Routine",
     date: "10 July 2025",
     status,
   };

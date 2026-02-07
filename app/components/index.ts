@@ -39,9 +39,17 @@ import PrescriptionCard from "./Dashboard/PrescriptionCard";
 import MedicineResultsTable from "./Tables/MedicineResultsTable";
 import ReferralsTable from "./Tables/ReferralTable";
 import ReferralsCard from "./Dashboard/ReferralsCard";
+import HospitalsTable from "./Tables/HospitalTable";
+import AddHospitalModal from "./modals/AddHospitalModal";
+import HospitalDetailModal from "./modals/HospitalDetailModal";
+import HospitalsCard from "./Dashboard/HospitalsCard";
 
 
 export {
+  HospitalsCard,
+  AddHospitalModal,
+  HospitalDetailModal,
+  HospitalsTable,
   ReferralsCard,
   PrescriptionCard,
   ReferralsTable,
