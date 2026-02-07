@@ -107,9 +107,11 @@ import EmergencyDashIcon from "./EmergencyDashIcon";
 import HospitalDashIcon from "./HospitalDashIcon";
 import CloudCheckIcon from "./CloudCheckIcon";
 import ArchiveDashIcon from "./ArchiveDashIcon";
+import VaccinationDashIcon from "./VaccinationDashIcon";
 
 
 export {
+    VaccinationDashIcon,
     HospitalDashIcon,
     CloudCheckIcon,
     ArchiveDashIcon,

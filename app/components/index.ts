@@ -43,9 +43,17 @@ import HospitalsTable from "./Tables/HospitalTable";
 import AddHospitalModal from "./modals/AddHospitalModal";
 import HospitalDetailModal from "./modals/HospitalDetailModal";
 import HospitalsCard from "./Dashboard/HospitalsCard";
+import VaccinationsCard from "./Dashboard/VaccinationsCard";
+import VaccinationsTable from "./Tables/VaccinationTable";
+import AddVaccinationModal from "./modals/AddVaccinationModal";
+import VaccinationDetailModal from "./modals/VaccinationDetailModal";
 
 
 export {
+  VaccinationDetailModal,
+  AddVaccinationModal,
+  VaccinationsTable,
+  VaccinationsCard,
   HospitalsCard,
   AddHospitalModal,
   HospitalDetailModal,
